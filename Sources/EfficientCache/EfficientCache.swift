@@ -21,6 +21,12 @@ public class EfficientCache<X: Cacheable> {
     
     // MARK: - Initialization
     
+    /// Initializes and returns an EfficientCache instance with the given cache
+    /// name and cache directory.
+    ///
+    /// - parameter name: A String representing the name of cache.
+    /// - parameter cacheDirectory: An URL representing the location of the directory
+    ///                             where objects are persisted.
     public init(name: String, cacheDirectory: URL) {
         self.name = name
         self.cache = NSCache()
@@ -28,6 +34,16 @@ public class EfficientCache<X: Cacheable> {
     
         // Configure the cache.
         cache.name = name
+    }
+    
+    /// Initializes an EfficientCache instance with the given cache name.
+    ///
+    /// - parameter name: A String representing the name of cache.
+    public convenience init(name: String) throws {
+        let cacheDirectory = try FileManager().url(for: .cachesDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+        
+        // Call the class's designated initializer.
+        self.init(name: name, cacheDirectory: cacheDirectory)
     }
     
     // MARK: - Methods
