@@ -9,7 +9,7 @@
 import Foundation
 
 public protocol CacheSaving {
-    associatedtype T: Cacheable
+    associatedtype T
     
     /// Saves the given item in the cache.
     ///

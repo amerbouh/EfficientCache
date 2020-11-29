@@ -22,7 +22,7 @@ internal class CacheItem: NSObject, NSCoding, NSSecureCoding {
     // MARK: - Properties
     
     /// The object that is being cached.
-    public let value: AnyObject
+    public let value: Any
     
     /// A Date representing the date at which the cached object is no longer
     /// valid.
@@ -30,7 +30,7 @@ internal class CacheItem: NSObject, NSCoding, NSSecureCoding {
     
     // MARK: - Initialization
     
-    public init(value: AnyObject, expirationDate: Date) {
+    public init(value: Any, expirationDate: Date) {
         self.value = value
         self.expirationDate = expirationDate
     }

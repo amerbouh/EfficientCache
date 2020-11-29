@@ -3,9 +3,9 @@ import XCTest
 
 final class EfficientCacheTests: XCTestCase {
     
-    var cache: EfficientCache<NSString>!
+    var cache: EfficientCache<String>!
     var testKey: String!
-    var testValue: NSString!
+    var testValue: String!
     
     override func setUpWithError() throws {
         let cachesDirectory = try FileManager().url(for: .cachesDirectory, in: .userDomainMask, appropriateFor: nil, create: false)

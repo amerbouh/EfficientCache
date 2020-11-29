@@ -8,4 +8,4 @@
 
 import Foundation
 
-public typealias Cacheable = NSCoding & NSSecureCoding
+internal typealias Cacheable = NSCoding & NSSecureCoding

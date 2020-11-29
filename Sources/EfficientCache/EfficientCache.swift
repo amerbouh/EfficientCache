@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class EfficientCache<X: Cacheable> {
+public final class EfficientCache<X> {
     public typealias T = X
     
     // MARK: - Properties

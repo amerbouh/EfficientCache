@@ -9,7 +9,7 @@
 import Foundation
 
 public protocol CacheFetching {
-    associatedtype T: Cacheable
+    associatedtype T
     
     /// Fetches the item with the given key from the cache.
     ///
