@@ -23,6 +23,6 @@ To add Efficent Cache as a dependency, you only need to add it to the `dependenc
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/anas-merbouh/EfficientCache.git", .upToNextMajor(from: "1.0.0"))
+    .package(url: "https://github.com/amerbouh/EfficientCache.git", .upToNextMajor(from: "1.0.0"))
 ]
 ```
